@@ -35,8 +35,6 @@ case $OPTION in
     iptables -t nat -A PREROUTING -j DNAT --to-destination "$foreignVPSIP"
     iptables -t nat -A POSTROUTING -j MASQUERADE -o "$networkInterfaceName"
     echo "tunnel is done Wait for other steps to take"
-    apt update -y
-    apt upgrade -y
     apt install iptables-persistent -y
     sudo netfilter-persistent save
     iptables-save > /etc/iptables/rules.v4
