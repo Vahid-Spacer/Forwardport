@@ -36,6 +36,7 @@ case $OPTION in
     iptables -t nat -A POSTROUTING -j MASQUERADE -o "$networkInterfaceName"
     echo "tunnel is done Wait for other steps to take"
     apt install iptables-persistent -y
+    apt --fix-broken install
     sudo netfilter-persistent save
     iptables-save > /etc/iptables/rules.v4
     ip6tables-save > /etc/iptables/rules.v6
