@@ -14,7 +14,7 @@ if [[ $distro != "ubuntu" ]]; then
 	echo "distro not supported please use ubuntu"
 	exit 1
 fi
-apt --fix-broken install
+apt --fix-broken install -y
 echo "Select one of the following options"
 echo "   1) Server tunnel"
 echo "   2) Remove the tunnel"
