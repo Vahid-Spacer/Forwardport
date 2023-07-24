@@ -14,7 +14,7 @@ if [[ $distro != "ubuntu" ]]; then
 	echo "distro not supported please use ubuntu"
 	exit 1
 fi
-
+apt --fix-broken install
 echo "Select one of the following options"
 echo "   1) Server tunnel"
 echo "   2) Remove the tunnel"
@@ -36,7 +36,6 @@ case $OPTION in
     iptables -t nat -A POSTROUTING -j MASQUERADE -o "$networkInterfaceName"
     echo "tunnel is done Wait for other steps to take"
     apt install iptables-persistent -y
-    apt --fix-broken install
     sudo netfilter-persistent save
     iptables-save > /etc/iptables/rules.v4
     ip6tables-save > /etc/iptables/rules.v6
