@@ -42,7 +42,7 @@ while true; do
     echo "   5) exit"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
     echo -e ""
-    read -p "Please select one [1-2-3-4-5]: " ${GREEN}choice${NC}
+    read -p "Please select one [1-2-3-4-5]: " echo"${GREEN}" choice echo"${NC}"
 
 case $choice in
 1)
