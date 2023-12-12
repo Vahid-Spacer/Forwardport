@@ -35,14 +35,14 @@ while true; do
     clear
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
     echo "Select one of the following options"
-    echo "   1) Server tunnel"
-    echo "   2) Remove the tunnel"
-    echo "   3) View the Forwarded IP"
-    echo "   4) SSL cert"
-    echo "   5) exit"
+    echo "   ${BLUE}1)${GREEN} Server tunnel${NC}"
+    echo "   ${BLUE}2)${GREEN} Remove the tunnel${NC}"
+    echo "   ${BLUE}3)${GREEN} View the Forwarded IP${NC}"
+    echo "   ${BLUE}4)${GREEN} SSL cert"
+    echo "   ${BLUE}5)${GREEN} exit"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
     echo -e ""
-    read -p "Please select one [1-2-3-4-5]: " echo"${GREEN}" choice echo"${NC}"
+    read -p "Please select one [1-2-3-4-5]: " choice 
 
 case $choice in
 1)
