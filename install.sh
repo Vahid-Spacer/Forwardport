@@ -33,17 +33,16 @@ fi
 apt --fix-broken install -y
 while true; do
     clear
-echo -e "${YELLOW}+--------------------------------------------------+${NC}"
-echo "Select one of the following options"
-echo "   1) Server tunnel"
-echo "   2) Remove the tunnel"
-echo "   3) View the Forwarded IP"
-echo "   4) SSL cert"
-echo "   5) exit"
-echo -e "${YELLOW}+--------------------------------------------------+${NC}"
-echo -e ""
-read -r -p "Please select one [1-2-3-4-5]: " -e choice
-
+    echo -e "${YELLOW}+--------------------------------------------------+${NC}"
+    echo "Select one of the following options"
+    echo "   1) Server tunnel"
+    echo "   2) Remove the tunnel"
+    echo "   3) View the Forwarded IP"
+    echo "   4) SSL cert"
+    echo "   5) exit"
+    echo -e "${YELLOW}+--------------------------------------------------+${NC}"
+    echo -e ""
+    read -p "Please select one [1-2-3-4-5]: " choice
 
 case $choice in
 1)
