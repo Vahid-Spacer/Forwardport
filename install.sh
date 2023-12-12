@@ -31,17 +31,18 @@ fi
 apt --fix-broken install -y
 while true; do
     clear
+    echo -e "${BLUE}+--------------------------------------------------+${NC}"
     echo -e "${BLUE}|${NC}                        B Y                      ${BLUE}|${NC}"
     echo -e "${BLUE}|${NC}                 D E V S P A C E X               ${BLUE}|${NC}"
     echo -e "${BLUE}|${NC}            ---------------------------           |${NC}"
     echo -e "${BLUE}|${NC}                      ${GREEN}Main Menu${BLUE}                   |${NC}"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
-    echo -e"${NC}Select one of the following options${NC}"
-    echo -e"   ${YELLOW} 1.${NC} ${GREEN} Server tunnel${NC}"
-    echo -e"   ${YELLOW} 2.${NC} ${GREEN} Remove the tunnel${NC}"
-    echo -e"   ${YELLOW} 3.${NC} ${GREEN} View the Forwarded IP${NC}"
-    echo -e"   ${YELLOW} 4.${NC} ${GREEN} SSL cert${NC}"
-    echo -e"   ${YELLOW} 5.${NC} ${GREEN} Exit${NC}"
+    echo -e "${NC} Select one of the following options${NC}"
+    echo -e " ${YELLOW} 1.${NC} ${GREEN} Server tunnel${NC}"
+    echo -e " ${YELLOW} 2.${NC} ${GREEN} Remove the tunnel${NC}"
+    echo -e " ${YELLOW} 3.${NC} ${GREEN} View the Forwarded IP${NC}"
+    echo -e " ${YELLOW} 4.${NC} ${GREEN} SSL cert${NC}"
+    echo -e " ${YELLOW} 5.${NC} ${GREEN} Exit${NC}"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
     echo -e ""
     read -p "${RED}Please select one [1-2-3-4-5]:${NC} " choice 
