@@ -32,8 +32,8 @@ apt --fix-broken install -y
 while true; do
     clear
     echo -e "${BLUE}+--------------------------------------------------+${NC}"
-    echo -e "${BLUE}|${NC}                        B Y                      ${BLUE}|${NC}"
-    echo -e "${BLUE}|${NC}                 D E V S P A C E X               ${BLUE}|${NC}"
+    echo -e "${BLUE}|${NC}                         B Y                       ${BLUE}|${NC}"
+    echo -e "${BLUE}|${NC}                  D E V S P A C E X                ${BLUE}|${NC}"
     echo -e "${BLUE}|${NC}            ---------------------------           |${NC}"
     echo -e "${BLUE}|${NC}                      ${GREEN}Main Menu${BLUE}                   |${NC}"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
