@@ -48,33 +48,8 @@ while true; do
     read -p " Please select one [1-2-3-4-5]: " choice 
 
     case $choice in
+
         1)
-            echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
-            sysctl -p
-            iptables -t nat -I PREROUTING -p tcp --dport 810 -j DNAT --to-destination "$thisServerIP"
-            iptables -t nat -I PREROUTING -p udp --dport 810 -j DNAT --to-destination "$thisServerIP"
-            iptables -t nat -I PREROUTING -p tcp --dport 4143 -j DNAT --to-destination "$thisServerIP"
-            iptables -t nat -I PREROUTING -p udp --dport 4143 -j DNAT --to-destination "$thisServerIP"
-            iptables -t nat -I PREROUTING -p tcp --dport 22 -j DNAT --to-destination "$thisServerIP"
-            echo "Enter foreign server IP:"
-            read -r foreignVPSIP
-            iptables -t nat -A PREROUTING -j DNAT --to-destination "$foreignVPSIP"
-            iptables -t nat -A POSTROUTING -j MASQUERADE -o "$networkInterfaceName"
-            echo "tunnel is done Wait for other steps to take"
-            apt install iptables-persistent -y
-            sudo netfilter-persistent save
-            iptables-save > /etc/iptables/rules.v4
-            ip6tables-save > /etc/iptables/rules.v6
-            echo "Your tunnel finished"
-            ;;
-        2)
-            sudo iptables -t nat -F
-            echo "Your forward port was removed"
-            ;;
-        3)
-          iptables -t nat -L --line-numbers
-          ;;
-        4)
             apt install curl socat -y
             curl https://get.acme.sh | sh
             ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
