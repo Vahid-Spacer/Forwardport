@@ -19,8 +19,9 @@ echo "Select one of the following options"
 echo "   1) Server tunnel"
 echo "   2) Remove the tunnel"
 echo "   3) View the Forwarded IP"
-echo "   3) exit"
-read -r -p "Please select one [1-2-3-4]: " -e OPTION
+echo "   4) SSL cert"
+echo "   5) exit"
+read -r -p "Please select one [1-2-3-4-5]: " -e OPTION
 case $OPTION in
 1)
     echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
@@ -48,7 +49,20 @@ sudo iptables -t nat -F
   3)
 iptables -t nat -L --line-numbers
   ;;
-    4)
+  4)
+    apt install curl socat -y
+    curl https://get.acme.sh | sh
+    ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+    echo "Enter email (original or random):"
+    read -r email
+    ~/.acme.sh/acme.sh --register-account -m "$email"
+    echo "Enter your domain:"
+    read -r domain
+    ~/.acme.sh/acme.sh --issue -d "$domain" --standalone
+    ~/.acme.sh/acme.sh --installcert -d "$domain" --key-file /root/private.key --fullchain-file /root/cert.crt
+    echo "Your SSL Cert finished"
+      ;;
+    5)
     exit
       ;;
 esac
