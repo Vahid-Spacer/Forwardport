@@ -45,7 +45,7 @@ while true; do
     echo -e " ${YELLOW} 5.${NC} ${GREEN} Exit${NC}"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
     echo -e ""
-    read -p "${RED}Please select one [1-2-3-4-5]:${NC} " choice 
+    read -p " Please select one [1-2-3-4-5]: " choice 
 
     case $choice in
         1)
@@ -94,4 +94,3 @@ while true; do
             exit
             ;;
 esac
-done
