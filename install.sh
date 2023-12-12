@@ -33,13 +33,15 @@ fi
 apt --fix-broken install -y
 while true; do
     clear
+    echo -e "${BLUE}|            ---------------------------           |${NC}"
+    echo -e "${BLUE}|                      ${GREEN}Main Menu${BLUE}                   |${NC}"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
     echo "Select one of the following options"
-    echo "   ${BLUE}1)${GREEN} Server tunnel${NC}"
-    echo "   ${BLUE}2)${GREEN} Remove the tunnel${NC}"
-    echo "   ${BLUE}3)${GREEN} View the Forwarded IP${NC}"
-    echo "   ${BLUE}4)${GREEN} SSL cert"
-    echo "   ${BLUE}5)${GREEN} exit"
+    echo "   ${YELLOW} 1.${NC} ${GREEN} Server tunnel${NC}"
+    echo "   ${YELLOW} 2.${NC} ${GREEN} Remove the tunnel${NC}"
+    echo "   ${YELLOW} 3.${NC} ${GREEN} View the Forwarded IP${NC}"
+    echo "   ${YELLOW} 4.${NC} ${GREEN} SSL cert"
+    echo "   ${YELLOW} 5.${NC} ${GREEN} Exit"
     echo -e "${YELLOW}+--------------------------------------------------+${NC}"
     echo -e ""
     read -p "Please select one [1-2-3-4-5]: " choice 
