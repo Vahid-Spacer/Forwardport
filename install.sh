@@ -41,8 +41,11 @@ echo "   3) View the Forwarded IP"
 echo "   4) SSL cert"
 echo "   5) exit"
 echo -e "${YELLOW}+--------------------------------------------------+${NC}"
-read -r -p "Please select one [1-2-3-4-5]: " -e OPTION
-case $OPTION in
+echo -e ""
+read -r -p "Please select one [1-2-3-4-5]: " -e choice
+
+
+    case $choice in
 1)
     echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
     sysctl -p
