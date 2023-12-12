@@ -65,7 +65,7 @@ while true; do
             echo"/root/cert.crt"
             echo"/root/private.key"
             ;;
-        5)
+        2)
             exit
             ;;
 esac
