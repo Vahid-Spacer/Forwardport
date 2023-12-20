@@ -18,20 +18,20 @@ fi
 
 while true; do
     clear
-    echo -e "+--------------------------------------------------+"
-    echo -e "|                         B Y                       |"
-    echo -e "|                  D E V S P A C E X                |"
-    echo -e "|            ---------------------------           |"
-    echo -e "|                      Main Menu                   |"
-    echo -e "+--------------------------------------------------+"
-    echo -e " Select one of the following options"
-    echo -e " 1. Server tunnel"
-    echo -e " 2.  Remove the tunnel"
-    echo -e " 3.  View the Forwarded IP"
-    echo -e " 4.  SSL cert"
-    echo -e " 5.  Exit"
-    echo -e "+--------------------------------------------------+"
-    echo -e ""
+    echo "+--------------------------------------------------+"
+    echo "|                         B Y                       |"
+    echo "|                  D E V S P A C E X                |"
+    echo "|            ---------------------------           |"
+    echo "|                      Main Menu                   |"
+    echo "+--------------------------------------------------+"
+    echo " Select one of the following options"
+    echo " 1. Server tunnel"
+    echo " 2.  Remove the tunnel"
+    echo " 3.  View the Forwarded IP"
+    echo " 4.  SSL cert"
+    echo " 5.  Exit"
+    echo "+--------------------------------------------------+"
+    echo ""
     read -p " Please select one [1-2-3-4-5]: " choice 
 
     case $choice in
