@@ -15,7 +15,7 @@ if [[ $EUID -ne 0 ]]; then
    sudo "$0" "$@"
    exit 1
 fi
-apt --fix-broken install -y
+#apt --fix-broken install -y
 echo "Running as root..."
 sleep .5
 clear
