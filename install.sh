@@ -1,13 +1,6 @@
 #!/bin/bash
 
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-MAGENTA='\033[0;35m'
-CYAN='\033[0;36m'
-GRAY='\033[0;37m'
-NC='\033[0m' # No Color
+
  Check if user is root
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root" # User must run the script as root
@@ -31,19 +24,19 @@ fi
 
 while true; do
     clear
-    echo -e "${BLUE}+--------------------------------------------------+${NC}"
-    echo -e "${BLUE}|${NC}                         B Y                       ${BLUE}|${NC}"
-    echo -e "${BLUE}|${NC}                  D E V S P A C E X                ${BLUE}|${NC}"
-    echo -e "${BLUE}|${NC}            ---------------------------           |${NC}"
-    echo -e "${BLUE}|${NC}                      ${GREEN}Main Menu${BLUE}                   |${NC}"
-    echo -e "${YELLOW}+--------------------------------------------------+${NC}"
-    echo -e "${NC} Select one of the following options${NC}"
-    echo -e "${YELLOW} 1.${NC} ${GREEN} Server tunnel${NC}"
-    echo -e "${YELLOW} 2.${NC} ${GREEN} Remove the tunnel${NC}"
-    echo -e "${YELLOW} 3.${NC} ${GREEN} View the Forwarded IP${NC}"
-    echo -e "${YELLOW} 4.${NC} ${GREEN} SSL cert${NC}"
-    echo -e "${YELLOW} 5.${NC} ${GREEN} Exit${NC}"
-    echo -e "${YELLOW}+--------------------------------------------------+${NC}"
+    echo -e "+--------------------------------------------------+"
+    echo -e "|                         B Y                       |"
+    echo -e "|                  D E V S P A C E X                |"
+    echo -e "|            ---------------------------           |"
+    echo -e "|                      Main Menu                   |"
+    echo -e "+--------------------------------------------------+"
+    echo -e " Select one of the following options"
+    echo -e " 1. Server tunnel"
+    echo -e " 2.  Remove the tunnel"
+    echo -e " 3.  View the Forwarded IP"
+    echo -e " 4.  SSL cert"
+    echo -e " 5.  Exit"
+    echo -e "+--------------------------------------------------+"
     echo -e ""
     read -p " Please select one [1-2-3-4-5]: " choice 
 
