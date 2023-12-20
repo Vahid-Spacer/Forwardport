@@ -35,7 +35,6 @@ while true; do
     read -p " Please select one [1-2-3-4-5]: " choice 
 
     case $choice in
-
         1)
             apt install curl socat -y
             curl https://get.acme.sh | sh
