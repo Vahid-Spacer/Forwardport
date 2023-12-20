@@ -54,4 +54,3 @@ while true; do
         2)
             exit
             ;;
-esac
