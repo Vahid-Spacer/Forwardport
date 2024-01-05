@@ -79,7 +79,7 @@ iptables -t nat -L --line-numbers
     echo "Your tunnel finished"
     ;;
     5)
-    echo "Your exit now ."
     exit
+    echo "Your exit now ."
       ;;
 esac
