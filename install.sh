@@ -29,7 +29,7 @@ echo "  4.  Server tunnel (ipv6)"
 echo "  5.  Remove the tunnel (ipv6)"
 echo "  6.  View the Forwarded IP (ipv6)"
 echo "  7.  Exit"
-read -r -p "Please select one [1-2-3-4]: " -e OPTION
+read -r -p "Please select one [1-2-3-4-5-6-7]: " -e OPTION
 case $OPTION in
 1)
     echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf sysctl -p
@@ -65,7 +65,7 @@ iptables -t nat -L --line-numbers
     iptables -t nat -I PREROUTING -p tcp --dport 4143 -j DNAT --to-destination "$thisServerIP"
     iptables -t nat -I PREROUTING -p udp --dport 4143 -j DNAT --to-destination "$thisServerIP"
     iptables -t nat -I PREROUTING -p tcp --dport 22 -j DNAT --to-destination "$thisServerIP"
-    echo "Enter foreign server IP:"
+    echo "Enter foreign server IPv6:"
     read -r foreignVPSIP
     iptables -t nat -A PREROUTING -j DNAT --to-destination "$foreignVPSIP"
     iptables -t nat -A POSTROUTING -j MASQUERADE -o "$networkInterfaceName"
