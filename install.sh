@@ -23,13 +23,12 @@ echo "|                      Main Menu                   |"
 echo "+--------------------------------------------------+"
 echo " Select one of the following options"
 echo "  1.  Server tunnel (ipv4)"
-echo "  2.  Remove the tunnel (ipv4)"
+echo "  2.  Remove the tunnel"
 echo "  3.  View the Forwarded IP (ipv4)"
 echo "  4.  Server tunnel (ipv6)"
-echo "  5.  Remove the tunnel (ipv6)"
-echo "  6.  View the Forwarded IP (ipv6)"
-echo "  7.  Exit"
-read -r -p "Please select one [1-2-3-4-5-6-7]: " -e OPTION
+echo "  5.  View the Forwarded IP (ipv6)"
+echo "  6.  Exit"
+read -r -p "Please select one [1-2-3-4-5-6]: " -e OPTION
 case $OPTION in
 1)
     echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf sysctl -p
