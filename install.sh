@@ -16,8 +16,8 @@ if [[ $distro != "ubuntu" ]]; then
 fi
 
 echo "+--------------------------------------------------+"
-echo "|                         B Y                       |"
-echo "|                  D E V S P A C E X                |"
+echo "|                         B Y                      |"
+echo "|                  D E V S P A C E X               |"
 echo "|            ---------------------------           |"
 echo "|                      Main Menu                   |"
 echo "+--------------------------------------------------+"
